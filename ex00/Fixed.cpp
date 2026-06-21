@@ -6,7 +6,7 @@
 /*   By: mafzal < mafzal@student.42warsaw.pl>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/21 23:50:11 by mafzal            #+#    #+#             */
-/*   Updated: 2026/06/21 23:50:12 by mafzal           ###   ########.fr       */
+/*   Updated: 2026/06/22 00:45:15 by mafzal           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ int Fixed::getRawBits(void) const
 	return (this->rawBits);
 }
 
-void Fixed::setRawBits(int const raw)
+void Fixed::setRawBits(int const num)
 {
-	this->rawBits = raw;
+	this->rawBits = num;
 }

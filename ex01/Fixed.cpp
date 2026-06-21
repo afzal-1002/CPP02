@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Fixed.cpp                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mafzal < mafzal@student.42warsaw.pl>       +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/06/22 01:13:07 by mafzal            #+#    #+#             */
+/*   Updated: 2026/06/22 01:13:08 by mafzal           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "Fixed.hpp"
 
 Fixed::Fixed()
@@ -8,7 +20,7 @@ Fixed::Fixed()
 Fixed::Fixed(const int num)
 {
 	std::cout << "Int constructor called" << std::endl;
-	this->num = num << (1 << fractionalBits);
+	this->num = num << fractionalBits;
 }
 
 Fixed::Fixed(const float num)
@@ -26,7 +38,6 @@ Fixed::Fixed(const Fixed &other)
 Fixed &Fixed::operator=(const Fixed &other)
 {
 	std::cout << "Copy assignment operator called" << std::endl;
-	std::cout << "This" << this << std::endl;
 	if (this != &other)
 		this->num = other.num;
 	return (*this);
@@ -52,7 +63,7 @@ float Fixed::toFloat(void) const
 
 int Fixed::toInt(void) const
 {
-    return (this->num / (1 << fractionalBits));
+	return (this->num / (1 << fractionalBits));
 }
 std::ostream &operator<<(std::ostream &out, const Fixed &fixed)
 {
