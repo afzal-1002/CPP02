@@ -1,4 +1,4 @@
-NAME	= 	fixed-point
+NAME	= 	fixed
 
 CPP		= 	c++
 CPPFLAGS	= 	-Wall -Wextra -Werror -std=c++98

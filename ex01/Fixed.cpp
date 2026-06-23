@@ -6,7 +6,7 @@
 /*   By: mafzal < mafzal@student.42warsaw.pl>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/22 01:13:07 by mafzal            #+#    #+#             */
-/*   Updated: 2026/06/22 01:13:08 by mafzal           ###   ########.fr       */
+/*   Updated: 2026/06/22 22:31:28 by mafzal           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,6 +65,7 @@ int Fixed::toInt(void) const
 {
 	return (this->num / (1 << fractionalBits));
 }
+
 std::ostream &operator<<(std::ostream &out, const Fixed &fixed)
 {
 	out << fixed.toFloat();
